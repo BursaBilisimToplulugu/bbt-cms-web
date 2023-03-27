@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+yarn install
+yarn eslint
+git add .
+yarn build
+yarn test-e2e
+yarn test-component
