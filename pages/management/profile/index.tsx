@@ -1,15 +1,15 @@
 import Head from 'next/head';
-import SidebarLayout from '@/layouts/SidebarLayout';
-import Footer from '@/components/Footer';
+import SidebarLayout from '@/modules/common/layouts/SidebarLayout';
+import Footer from '@/modules/common/components/Footer';
 
 import { Grid, Container } from '@mui/material';
 
-import ProfileCover from '@/content/Management/Users/details/ProfileCover';
-import RecentActivity from '@/content/Management/Users/details/RecentActivity';
-import Feed from '@/content/Management/Users/details/Feed';
-import PopularTags from '@/content/Management/Users/details/PopularTags';
-import MyCards from '@/content/Management/Users/details/MyCards';
-import Addresses from '@/content/Management/Users/details/Addresses';
+import ProfileCover from '@/modules/common/content/Management/Users/details/ProfileCover';
+import RecentActivity from '@/modules/common/content/Management/Users/details/RecentActivity';
+import Feed from '@/modules/common/content/Management/Users/details/Feed';
+import PopularTags from '@/modules/common/content/Management/Users/details/PopularTags';
+import MyCards from '@/modules/common/content/Management/Users/details/MyCards';
+import Addresses from '@/modules/common/content/Management/Users/details/Addresses';
 
 function ManagementUserProfile() {
   const user = {

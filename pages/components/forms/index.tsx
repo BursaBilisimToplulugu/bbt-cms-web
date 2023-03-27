@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import SidebarLayout from '@/layouts/SidebarLayout';
-import PageTitle from '@/components/PageTitle';
+import SidebarLayout from '@/modules/common/layouts/SidebarLayout';
+import PageTitle from '@/modules/common/components/PageTitle';
 import { useState } from 'react';
 
-import PageTitleWrapper from '@/components/PageTitleWrapper';
+import PageTitleWrapper from '@/modules/common/components/PageTitleWrapper';
 import {
   Container,
   Grid,
@@ -12,7 +12,7 @@ import {
   CardContent,
   Divider
 } from '@mui/material';
-import Footer from 'src/components/Footer';
+import Footer from '@/modules/common/components/Footer';
 
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';

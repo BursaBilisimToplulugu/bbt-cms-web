@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import SidebarLayout from '@/layouts/SidebarLayout';
-import PageTitle from '@/components/PageTitle';
-import PageTitleWrapper from '@/components/PageTitleWrapper';
+import SidebarLayout from '@/modules/common/layouts/SidebarLayout';
+import PageTitle from '@/modules/common/components/PageTitle';
+import PageTitleWrapper from '@/modules/common/components/PageTitleWrapper';
 import {
   Container,
   Grid,
@@ -10,7 +10,7 @@ import {
   CardContent,
   Divider
 } from '@mui/material';
-import Footer from 'src/components/Footer';
+import Footer from '@/modules/common/components/Footer';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import { deepOrange, deepPurple, green, pink } from '@mui/material/colors';

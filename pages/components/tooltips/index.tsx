@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import SidebarLayout from '@/layouts/SidebarLayout';
-import PageTitle from '@/components/PageTitle';
-import PageTitleWrapper from '@/components/PageTitleWrapper';
+import SidebarLayout from '@/modules/common/layouts/SidebarLayout';
+import PageTitle from '@/modules/common/components/PageTitle';
+import PageTitleWrapper from '@/modules/common/components/PageTitleWrapper';
 import {
   Container,
   Grid,
@@ -13,7 +13,7 @@ import {
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
-import Footer from 'src/components/Footer';
+import Footer from '@/modules/common/components/Footer';
 
 function Tooltips() {
   return (

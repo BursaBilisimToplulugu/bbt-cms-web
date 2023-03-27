@@ -1,15 +1,15 @@
 import { useState } from 'react';
 
 import Head from 'next/head';
-import SidebarLayout from '@/layouts/SidebarLayout';
+import SidebarLayout from '@/modules/common/layouts/SidebarLayout';
 
-import TopBarContent from '@/content/Applications/Messenger/TopBarContent';
-import BottomBarContent from '@/content/Applications/Messenger/BottomBarContent';
-import SidebarContent from '@/content/Applications/Messenger/SidebarContent';
-import ChatContent from '@/content/Applications/Messenger/ChatContent';
+import TopBarContent from '@/modules/common/content/Applications/Messenger/TopBarContent';
+import BottomBarContent from '@/modules/common/content/Applications/Messenger/BottomBarContent';
+import SidebarContent from '@/modules/common/content/Applications/Messenger/SidebarContent';
+import ChatContent from '@/modules/common/content/Applications/Messenger/ChatContent';
 import MenuTwoToneIcon from '@mui/icons-material/MenuTwoTone';
 
-import Scrollbar from '@/components/Scrollbar';
+import Scrollbar from '@/modules/common/components/Scrollbar';
 
 import {
   Box,

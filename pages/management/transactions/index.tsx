@@ -1,11 +1,11 @@
 import Head from 'next/head';
-import SidebarLayout from '@/layouts/SidebarLayout';
-import PageHeader from '@/content/Management/Transactions/PageHeader';
-import PageTitleWrapper from '@/components/PageTitleWrapper';
+import SidebarLayout from '@/modules/common/layouts/SidebarLayout';
+import PageHeader from '@/modules/common/content/Management/Transactions/PageHeader';
+import PageTitleWrapper from '@/modules/common/components/PageTitleWrapper';
 import { Grid, Container } from '@mui/material';
-import Footer from '@/components/Footer';
+import Footer from '@/modules/common/components/Footer';
 
-import RecentOrders from '@/content/Management/Transactions/RecentOrders';
+import RecentOrders from '@/modules/common/content/Management/Transactions/RecentOrders';
 
 function ApplicationsTransactions() {
   return (

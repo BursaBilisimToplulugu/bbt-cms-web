@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import SidebarLayout from '@/layouts/SidebarLayout';
+import SidebarLayout from '@/modules/common/layouts/SidebarLayout';
 import { ChangeEvent, useState } from 'react';
-import PageHeader from '@/content/Dashboards/Tasks/PageHeader';
-import Footer from '@/components/Footer';
+import PageHeader from '@/modules/common/content/Dashboards/Tasks/PageHeader';
+import Footer from '@/modules/common/components/Footer';
 import {
   Grid,
   Tab,
@@ -14,15 +14,15 @@ import {
   useTheme,
   styled
 } from '@mui/material';
-import PageTitleWrapper from '@/components/PageTitleWrapper';
+import PageTitleWrapper from '@/modules/common/components/PageTitleWrapper';
 
-import TeamOverview from '@/content/Dashboards/Tasks/TeamOverview';
-import TasksAnalytics from '@/content/Dashboards/Tasks/TasksAnalytics';
-import Performance from '@/content/Dashboards/Tasks/Performance';
-import Projects from '@/content/Dashboards/Tasks/Projects';
-import Checklist from '@/content/Dashboards/Tasks/Checklist';
-import Profile from '@/content/Dashboards/Tasks/Profile';
-import TaskSearch from '@/content/Dashboards/Tasks/TaskSearch';
+import TeamOverview from '@/modules/common/content/Dashboards/Tasks/TeamOverview';
+import TasksAnalytics from '@/modules/common/content/Dashboards/Tasks/TasksAnalytics';
+import Performance from '@/modules/common/content/Dashboards/Tasks/Performance';
+import Projects from '@/modules/common/content/Dashboards/Tasks/Projects';
+import Checklist from '@/modules/common/content/Dashboards/Tasks/Checklist';
+import Profile from '@/modules/common/content/Dashboards/Tasks/Profile';
+import TaskSearch from '@/modules/common/content/Dashboards/Tasks/TaskSearch';
 
 const TabsContainerWrapper = styled(Box)(
   ({ theme }) => `

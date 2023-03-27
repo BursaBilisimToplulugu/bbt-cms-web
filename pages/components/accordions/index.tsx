@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import SidebarLayout from '@/layouts/SidebarLayout';
+import SidebarLayout from '@/modules/common/layouts/SidebarLayout';
 
-import PageTitle from '@/components/PageTitle';
-import PageTitleWrapper from '@/components/PageTitleWrapper';
+import PageTitle from '@/modules/common/components/PageTitle';
+import PageTitleWrapper from '@/modules/common/components/PageTitleWrapper';
 import {
   Container,
   Grid,
@@ -16,7 +16,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Footer from 'src/components/Footer';
+import Footer from '@/modules/common/components/Footer';
 
 function Accordions() {
   return (

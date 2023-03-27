@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import SidebarLayout from '@/layouts/SidebarLayout';
-import PageTitle from '@/components/PageTitle';
-import PageTitleWrapper from '@/components/PageTitleWrapper';
+import SidebarLayout from '@/modules/common/layouts/SidebarLayout';
+import PageTitle from '@/modules/common/components/PageTitle';
+import PageTitleWrapper from '@/modules/common/components/PageTitleWrapper';
 import {
   Container,
   Grid,
@@ -11,7 +11,7 @@ import {
   Divider
 } from '@mui/material';
 import { useState } from 'react';
-import Footer from 'src/components/Footer';
+import Footer from '@/modules/common/components/Footer';
 
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Button from '@mui/material/Button';
