@@ -80,6 +80,7 @@ function HeaderUserbox() {
     <>
       <UserBoxButton color="secondary" ref={ref} onClick={handleOpen}>
         <Avatar variant="rounded" alt={user.name} src={user.avatar} />
+        {/* @ts-ignore */}
         <Hidden mdDown>
           <UserBoxText>
             <UserBoxLabel variant="body1">{user.name}</UserBoxLabel>
@@ -88,6 +89,7 @@ function HeaderUserbox() {
             </UserBoxDescription>
           </UserBoxText>
         </Hidden>
+        {/* @ts-ignore */}
         <Hidden smDown>
           <ExpandMoreTwoToneIcon sx={{ ml: 1 }} />
         </Hidden>

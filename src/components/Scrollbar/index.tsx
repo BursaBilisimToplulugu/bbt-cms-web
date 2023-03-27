@@ -13,6 +13,7 @@ const Scrollbar: FC<ScrollbarProps> = ({ className, children, ...rest }) => {
   const theme = useTheme();
 
   return (
+    // @ts-ignore
     <Scrollbars
       autoHide
       universal

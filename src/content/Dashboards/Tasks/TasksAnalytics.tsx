@@ -9,9 +9,10 @@ import {
   styled,
   useTheme
 } from '@mui/material';
+import dyanmic from 'next/dynamic';
 import ExpandMoreTwoToneIcon from '@mui/icons-material/ExpandMoreTwoTone';
-import { Chart } from 'src/components/Chart';
 import type { ApexOptions } from 'apexcharts';
+export const Chart = dyanmic(() => import('react-apexcharts'), { ssr: false });
 
 const DotPrimaryLight = styled('span')(
   ({ theme }) => `
@@ -240,6 +241,7 @@ function TasksAnalytics() {
           tasks completed
         </Typography>
       </Box>
+      {/* @ts-ignore */}
       <Chart
         options={chartOptions}
         series={chartData}

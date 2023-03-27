@@ -105,6 +105,7 @@ function Status500() {
               </Box>
             </Container>
           </Grid>
+          {/* @ts-ignore */}
           <Hidden mdDown>
             <GridWrapper
               xs={12}

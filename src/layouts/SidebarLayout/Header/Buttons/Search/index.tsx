@@ -150,6 +150,7 @@ function HeaderSearch() {
             <Divider sx={{ my: 1 }} />
             <List disablePadding>
               <ListItem button>
+                {/* @ts-ignore */}
                 <Hidden smDown>
                   <ListItemAvatar>
                     <Avatar
@@ -189,6 +190,7 @@ function HeaderSearch() {
               </ListItem>
               <Divider sx={{ my: 1 }} component="li" />
               <ListItem button>
+                {/* @ts-ignore */}
                 <Hidden smDown>
                   <ListItemAvatar>
                     <Avatar
@@ -227,6 +229,7 @@ function HeaderSearch() {
               </ListItem>
               <Divider sx={{ my: 1 }} component="li" />
               <ListItem button>
+                {/* @ts-ignore */}
                 <Hidden smDown>
                   <ListItemAvatar>
                     <Avatar
