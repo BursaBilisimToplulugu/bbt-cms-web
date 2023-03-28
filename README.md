@@ -57,3 +57,39 @@ yarn start // and type http://localhost:3000 from your browser
 ```
 
 ## Folder Structure:
+```
+.
+├── public
+└── src/
+    ├── modules/
+    │   ├── common/
+    │   │   ├── assets
+    │   │   ├── components
+    │   │   ├── icons
+    │   │   ├── layouts
+    │   │   ├── providers
+    │   │   └── types
+    │   ├── core/
+    │   │   ├── hooks
+    │   │   ├── lib
+    │   │   ├── redux
+    │   │   └── utils
+    │   ├── maps/
+    │   │   ├── assets
+    │   │   ├── components
+    │   │   ├── hooks
+    │   │   ├── icons
+    │   │   ├── providers
+    │   │   ├── redux
+    │   │   ├── types
+    │   │   └── utils
+    │   └── locations/
+    │       ├── assets
+    │       ├── components
+    │       ├── icons
+    │       ├── redux
+    │       ├── types
+    │       └── utils
+    ├── styles
+    └── pages
+```
