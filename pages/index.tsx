@@ -6,7 +6,7 @@ import {
   Button,
   styled
 } from '@mui/material';
-import type { ReactElement } from 'react';
+import { ReactElement, useEffect } from 'react';
 import BaseLayout from '@/modules/common/layouts/BaseLayout';
 
 import Link from '@/modules/common/components/Link';
@@ -14,6 +14,8 @@ import Head from 'next/head';
 
 import Logo from '@/modules/common/components/LogoSign';
 import Hero from '@/modules/common/content/Overview/Hero';
+import { useAppDispatch } from '@/modules/core/store';
+import { greet } from '@/modules/user/redux/reducer/userReducer';
 
 const HeaderWrapper = styled(Card)(
   ({ theme }) => `
@@ -35,6 +37,10 @@ const OverviewWrapper = styled(Box)(
 );
 
 function Overview() {
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(greet());
+  }, [dispatch]);
   return (
     <OverviewWrapper>
       <Head>
