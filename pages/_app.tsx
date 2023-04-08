@@ -35,6 +35,8 @@ function TokyoApp(props: TokyoAppProps) {
   Router.events.on('routeChangeError', nProgress.done);
   Router.events.on('routeChangeComplete', nProgress.done);
 
+  console.log('here');
+
   return (
     <Provider store={store}>
       <CacheProvider value={emotionCache}>
