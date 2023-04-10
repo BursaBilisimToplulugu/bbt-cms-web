@@ -1,6 +1,4 @@
 import { useState } from 'react';
-
-import Head from 'next/head';
 import SidebarLayout from '@/modules/common/layouts/SidebarLayout';
 
 import TopBarContent from '@/modules/common/content/Applications/Messenger/TopBarContent';
@@ -84,9 +82,6 @@ function ApplicationsMessenger() {
 
   return (
     <>
-      <Head>
-        <title>Messenger - Applications</title>
-      </Head>
       <RootWrapper className="Mui-FixedWrapper">
         <DrawerWrapperMobile
           sx={{
