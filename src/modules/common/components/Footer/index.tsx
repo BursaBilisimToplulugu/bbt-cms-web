@@ -18,24 +18,9 @@ function Footer() {
       >
         <Box>
           <Typography variant="subtitle1">
-            &copy; 2022 - Tokyo Free Black Next.js Typescript Admin Dashboard
+            &copy; 2022 - Bursa BT Dashboard
           </Typography>
         </Box>
-        <Typography
-          sx={{
-            pt: { xs: 2, md: 0 }
-          }}
-          variant="subtitle1"
-        >
-          Crafted by{' '}
-          <Link
-            href="https://bloomui.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            BloomUI.com
-          </Link>
-        </Typography>
       </Box>
     </FooterWrapper>
   );

@@ -23,6 +23,9 @@ import AccountBoxTwoToneIcon from '@mui/icons-material/AccountBoxTwoTone';
 import LockOpenTwoToneIcon from '@mui/icons-material/LockOpenTwoTone';
 import AccountTreeTwoToneIcon from '@mui/icons-material/AccountTreeTwoTone';
 
+import { signIn, signOut, useSession } from "next-auth/react"
+import { useRouter } from 'next/router';
+
 const UserBoxButton = styled(Button)(
   ({ theme }) => `
         padding-left: ${theme.spacing(1)};
@@ -59,11 +62,24 @@ const UserBoxDescription = styled(Typography)(
 );
 
 function HeaderUserbox() {
-  const user = {
-    name: 'Catherine Pike',
-    avatar: '/static/images/avatars/1.jpg',
-    jobtitle: 'Project Manager'
-  };
+  const { data: session, status } = useSession()
+  let user;
+  if (session){
+    console.log(session);
+    console.log(status);
+    user = {
+      name:  session.user.name,
+      avatar: session.user.image,
+      jobtitle: session.user.email
+    };
+  }else{
+    user = {
+      name: 'Bursa BT',
+      avatar: '/static/images/avatars/1.jpg',
+      jobtitle: ''
+    };
+  }
+  
 
   const ref = useRef<any>(null);
   const [isOpen, setOpen] = useState<boolean>(false);
@@ -76,6 +92,7 @@ function HeaderUserbox() {
     setOpen(false);
   };
 
+  const router = useRouter();
   return (
     <>
       <UserBoxButton color="secondary" ref={ref} onClick={handleOpen}>
@@ -139,7 +156,13 @@ function HeaderUserbox() {
         </List>
         <Divider />
         <Box sx={{ m: 1 }}>
-          <Button color="primary" fullWidth>
+          <Button color="primary" fullWidth
+            onClick={(e) => {
+              e.preventDefault()
+              signOut();
+              router.push('')
+              
+            }}>
             <LockOpenTwoToneIcon sx={{ mr: 1 }} />
             Sign out
           </Button>

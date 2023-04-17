@@ -202,6 +202,38 @@ function SidebarMenu() {
             </List>
           </SubMenuWrapper>
         </List>
+
+        <List
+          component="div"
+          subheader={
+            <ListSubheader component="div" disableSticky>
+              AI
+            </ListSubheader>
+          }
+        >
+          <SubMenuWrapper>
+            <List component="div">
+              <ListItem component="div">
+                <NextLink href="/dashboards/ai" passHref>
+                  <Button
+                    className={
+                      currentRoute === '/dashboards/ai' ? 'active' : ''
+                    }
+                    disableRipple
+                    component="a"
+                    onClick={closeSidebar}
+                    startIcon={<BrightnessLowTwoToneIcon />}
+                  >
+                   AI Image
+                  </Button>
+                </NextLink>
+              </ListItem>
+             
+            </List>
+          </SubMenuWrapper>
+        </List>
+
+
         <List
           component="div"
           subheader={

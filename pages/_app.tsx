@@ -13,6 +13,7 @@ import createEmotionCache from 'src/createEmotionCache';
 import { SidebarProvider } from '@/modules/common/contexts/SidebarContext';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import { SessionProvider } from 'next-auth/react';
 import { Provider } from 'react-redux';
 import { store } from '@/modules/core/store';
 
@@ -35,29 +36,35 @@ function TokyoApp(props: TokyoAppProps) {
   Router.events.on('routeChangeError', nProgress.done);
   Router.events.on('routeChangeComplete', nProgress.done);
 
-  console.log('here');
 
   return (
-    <Provider store={store}>
-      <CacheProvider value={emotionCache}>
-        <Head>
-          <title>Tokyo Free Black NextJS Typescript Admin Dashboard</title>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-          />
-        </Head>
-        <SidebarProvider>
-          <ThemeProvider>
-            <LocalizationProvider dateAdapter={AdapterDateFns}>
-              <CssBaseline />
-              {/* @ts-ignore */}
-              {getLayout(<Component {...pageProps} />)}
-            </LocalizationProvider>
-          </ThemeProvider>
-        </SidebarProvider>
-      </CacheProvider>
+    
+    <SessionProvider
+      // Provider options are not required but can be useful in situations where
+      // you have a short session maxAge time. Shown here with default values.
+      session={pageProps.session}
+    >
+      <Provider store={store}>
+    <CacheProvider value={emotionCache}>
+      <Head>
+        <title>Dashboard</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+      </Head>
+      <SidebarProvider>
+        <ThemeProvider>
+          <LocalizationProvider dateAdapter={AdapterDateFns}>
+            <CssBaseline />
+            {/* @ts-ignore */}
+            {getLayout(<Component {...pageProps} />)}
+          </LocalizationProvider>
+        </ThemeProvider>
+      </SidebarProvider>
+    </CacheProvider>
     </Provider>
+    </SessionProvider>
   );
 }
 

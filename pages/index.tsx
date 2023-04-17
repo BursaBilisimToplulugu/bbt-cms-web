@@ -44,7 +44,7 @@ function Overview() {
   return (
     <OverviewWrapper>
       <Head>
-        <title>Tokyo Free Black NextJS Typescript Admin Dashboard</title>
+        <title>T </title>
       </Head>
       <HeaderWrapper>
         <Container maxWidth="lg">
@@ -72,18 +72,6 @@ function Overview() {
         </Container>
       </HeaderWrapper>
       <Hero />
-      <Container maxWidth="lg" sx={{ mt: 8 }}>
-        <Typography textAlign="center" variant="subtitle1">
-          Crafted by{' '}
-          <Link
-            href="https://bloomui.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            BloomUI.com
-          </Link>
-        </Typography>
-      </Container>
     </OverviewWrapper>
   );
 }
