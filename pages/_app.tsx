@@ -39,11 +39,13 @@ function TokyoApp(props: TokyoAppProps) {
   console.log('here');
 
   return (
+    
     <SessionProvider
       // Provider options are not required but can be useful in situations where
       // you have a short session maxAge time. Shown here with default values.
       session={pageProps.session}
     >
+      <Provider store={store}>
     <CacheProvider value={emotionCache}>
       <Head>
         <title>Dashboard</title>
@@ -62,6 +64,7 @@ function TokyoApp(props: TokyoAppProps) {
         </ThemeProvider>
       </SidebarProvider>
     </CacheProvider>
+    </Provider>
     </SessionProvider>
   );
 }
