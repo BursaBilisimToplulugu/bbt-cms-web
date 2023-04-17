@@ -23,6 +23,8 @@ import AccountBoxTwoToneIcon from '@mui/icons-material/AccountBoxTwoTone';
 import LockOpenTwoToneIcon from '@mui/icons-material/LockOpenTwoTone';
 import AccountTreeTwoToneIcon from '@mui/icons-material/AccountTreeTwoTone';
 
+import { signIn, signOut, useSession } from "next-auth/react"
+
 const UserBoxButton = styled(Button)(
   ({ theme }) => `
         padding-left: ${theme.spacing(1)};
@@ -59,11 +61,23 @@ const UserBoxDescription = styled(Typography)(
 );
 
 function HeaderUserbox() {
-  const user = {
-    name: 'Catherine Pike',
-    avatar: '/static/images/avatars/1.jpg',
-    jobtitle: 'Project Manager'
-  };
+  const { data: session, status } = useSession()
+  let user;
+  if (session){
+    console.log(session);
+    user = {
+      name:  session.user.name,
+      avatar: session.user.image,
+      jobtitle: session.user.email
+    };
+  }else{
+    user = {
+      name: '2Catherine Pike',
+      avatar: '/static/images/avatars/1.jpg',
+      jobtitle: 'Project Manager'
+    };
+  }
+  
 
   const ref = useRef<any>(null);
   const [isOpen, setOpen] = useState<boolean>(false);

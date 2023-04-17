@@ -14,7 +14,7 @@ import Addresses from '@/modules/common/content/Management/Users/details/Address
 function ManagementUserProfile() {
   const user = {
     savedCards: 7,
-    name: 'Catherine Pike',
+    name: '1Catherine Pike',
     coverImg: '/static/images/placeholders/covers/5.jpg',
     avatar: '/static/images/avatars/4.jpg',
     description:
