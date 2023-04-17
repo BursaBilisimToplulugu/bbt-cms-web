@@ -99,9 +99,6 @@ const NextJsAvatar = styled(Box)(
 function Hero() {
 
   const { data: session, status } = useSession()
-  console.log(session);
-  
-  const loading = status === 'loading'
 
   return (
     <Container maxWidth="lg" sx={{ textAlign: 'center' }}>

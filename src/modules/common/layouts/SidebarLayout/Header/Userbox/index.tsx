@@ -66,6 +66,7 @@ function HeaderUserbox() {
   let user;
   if (session){
     console.log(session);
+    console.log(status);
     user = {
       name:  session.user.name,
       avatar: session.user.image,
@@ -159,7 +160,7 @@ function HeaderUserbox() {
             onClick={(e) => {
               e.preventDefault()
               signOut();
-              router.push('/')
+              router.push('')
               
             }}>
             <LockOpenTwoToneIcon sx={{ mr: 1 }} />
