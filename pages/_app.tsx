@@ -14,6 +14,8 @@ import { SidebarProvider } from '@/modules/common/contexts/SidebarContext';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import { SessionProvider } from 'next-auth/react';
+import { Provider } from 'react-redux';
+import { store } from '@/modules/core/store';
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -33,6 +35,8 @@ function TokyoApp(props: TokyoAppProps) {
   Router.events.on('routeChangeStart', nProgress.start);
   Router.events.on('routeChangeError', nProgress.done);
   Router.events.on('routeChangeComplete', nProgress.done);
+
+  console.log('here');
 
   return (
     <SessionProvider
