@@ -51,7 +51,6 @@ function TokyoApp(props: TokyoAppProps) {
           <ThemeProvider>
             <LocalizationProvider dateAdapter={AdapterDateFns}>
               <CssBaseline />
-              {/* @ts-ignore */}
               {getLayout(<Component {...pageProps} />)}
             </LocalizationProvider>
           </ThemeProvider>

@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import SidebarLayout from '@/modules/common/layouts/SidebarLayout';
 
 import PageTitle from '@/modules/common/components/PageTitle';
@@ -16,14 +15,10 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Footer from '@/modules/common/components/Footer';
 
 function Accordions() {
   return (
     <>
-      <Head>
-        <title>Accordions - Components</title>
-      </Head>
       <PageTitleWrapper>
         <PageTitle
           heading="Accordions"
@@ -90,7 +85,6 @@ function Accordions() {
           </Grid>
         </Grid>
       </Container>
-      <Footer />
     </>
   );
 }
