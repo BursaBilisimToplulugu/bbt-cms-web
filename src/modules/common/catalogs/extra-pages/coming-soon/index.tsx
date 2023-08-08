@@ -68,7 +68,7 @@ const ButtonNotify = styled(Button)(
 `
 );
 
-function StatusComingSoon() {
+function ComingSoon() {
   const calculateTimeLeft = () => {
     const difference = +new Date(`2023`) - +new Date();
     let timeLeft = {};
@@ -193,8 +193,8 @@ function StatusComingSoon() {
   );
 }
 
-export default StatusComingSoon;
+export default ComingSoon;
 
-StatusComingSoon.getLayout = function getLayout(page: ReactElement) {
+ComingSoon.getLayout = function getLayout(page: ReactElement) {
   return <BaseLayout>{page}</BaseLayout>;
 };

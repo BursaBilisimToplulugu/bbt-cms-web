@@ -1,31 +1,34 @@
-import Head from 'next/head';
-import SidebarLayout from '@/modules/common/layouts/SidebarLayout';
+import React, { useState } from 'react';
+import { Meta } from '@storybook/react';
 import PropTypes from 'prop-types';
-import { useState } from 'react';
-
-import PageTitle from '@/modules/common/components/PageTitle';
-import PageTitleWrapper from '@/modules/common/components/PageTitleWrapper';
-import {
-  Container,
-  Grid,
-  Card,
-  CardHeader,
-  CardContent,
-  Divider
-} from '@mui/material';
-import Button from '@mui/material/Button';
-import Avatar from '@mui/material/Avatar';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ListItemText from '@mui/material/ListItemText';
-import DialogTitle from '@mui/material/DialogTitle';
-import Dialog from '@mui/material/Dialog';
 import PersonIcon from '@mui/icons-material/Person';
 import AddIcon from '@mui/icons-material/Add';
-import Typography from '@mui/material/Typography';
 import { blue } from '@mui/material/colors';
-import Footer from '@/modules/common/components/Footer';
+import {
+  Avatar,
+  Button,
+  Card,
+  CardContent,
+  CardHeader,
+  Dialog,
+  DialogTitle,
+  Divider,
+  Modal,
+  List,
+  ListItem,
+  ListItemAvatar,
+  ListItemText,
+  Typography,
+  Container,
+  Grid
+} from '@mui/material';
+
+const meta: Meta<typeof Modal> = {
+  title: 'Common/Modal',
+  component: Modal
+};
+
+export default meta;
 
 const emails = ['username@gmail.com', 'user02@gmail.com'];
 
@@ -82,7 +85,7 @@ SimpleDialog.propTypes = {
   selectedValue: PropTypes.string.isRequired
 };
 
-function Modals() {
+export const Modals = () => {
   const [open, setOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState(emails[1]);
 
@@ -97,16 +100,6 @@ function Modals() {
 
   return (
     <>
-      <Head>
-        <title>Modals - Components</title>
-      </Head>
-      <PageTitleWrapper>
-        <PageTitle
-          heading="Modals"
-          subHeading="Dialogs inform users about a task and can contain critical information, require decisions, or involve multiple tasks."
-          docs="https://material-ui.com/components/dialogs/"
-        />
-      </PageTitleWrapper>
       <Container maxWidth="lg">
         <Grid
           container
@@ -137,11 +130,6 @@ function Modals() {
           </Grid>
         </Grid>
       </Container>
-      <Footer />
     </>
   );
-}
-
-Modals.getLayout = (page) => <SidebarLayout>{page}</SidebarLayout>;
-
-export default Modals;
+};
